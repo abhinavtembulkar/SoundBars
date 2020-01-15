@@ -19,7 +19,7 @@ function setup(){
     amp = new p5.Amplitude()
 
     button = createButton("play")
-    button.mousePressed(toggleplaying)
+    button.mousePressed(togglePlaying)
 }
 
 function loaded(){
