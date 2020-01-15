@@ -4,6 +4,7 @@ var n = 71
 var song
 var amp
 var vol
+var button
 
 function setup(){
     createCanvas(550,550)
@@ -16,11 +17,17 @@ function setup(){
     
     song = loadSound('origin.mp3',loaded)
     amp = new p5.Amplitude()
+
+    button = createButton("play",toggleplaying)
 }
 
 function loaded(){
     console.log('LOADED !')
 
+    song.play()
+}
+
+function toggleplaying(){
     song.play()
 }
 
