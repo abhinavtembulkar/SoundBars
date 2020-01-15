@@ -18,7 +18,8 @@ function setup(){
     song = loadSound('origin.mp3',loaded)
     amp = new p5.Amplitude()
 
-    button = createButton("play",toggleplaying)
+    button = createButton("play")
+    button.mousePressed(toggleplaying)
 }
 
 function loaded(){
@@ -27,8 +28,16 @@ function loaded(){
     song.play()
 }
 
-function toggleplaying(){
-    song.play()
+function togglePlaying(){
+    if(!song.isPlaying()){
+        song.play()
+        song.setVolume(1)
+        button.html("pause")
+    }
+    else{
+        song.pause()
+        button.html("play")
+    }
 }
 
 var x=0,y=0,t=0,r=0
