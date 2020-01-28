@@ -12,10 +12,10 @@ function setup(){
 
     for(var i=0;i<n;i++)
     {
-        B.push(new bars(5*i,1,i,5*i,10*i))
+        B.push(new bars(5*i,1,10*i,5*i,i))
     }  
     
-    song = loadSound('origin.mp3',loaded)
+    song = loadSound('Cradles.mp3',loaded)
     amp = new p5.Amplitude()
 
     button = createButton("play")
