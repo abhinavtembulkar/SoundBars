@@ -12,7 +12,7 @@ function setup(){
 
     for(var i=0;i<n;i++)
     {
-        B.push(new bars(5*i,1,10*i,5*i,i))
+        B.push(new bars(5*i,1,10*i,i,i))
     }  
     
     song = loadSound('Cradles.mp3',loaded)
