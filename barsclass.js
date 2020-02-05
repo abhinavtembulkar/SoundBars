@@ -9,21 +9,21 @@ class bars{
     }
 
     move(vol){
-    applyMatrix(1,0,0,1,width/2,height/2)
+        applyMatrix(1,0,0,1,width/2,height/2)
 
-    noFill()
-    stroke(220,0,0)
-    strokeWeight(2)
-    circle(0,0,100)
-    angleMode(DEGREES)
+        noFill()
+        strokeWeight(2)
+        angleMode(DEGREES)
+        
+        rotate(this.angle+=this.speed)
+        translate(75,0)
+        
+        stroke(255)
+        rect(-25,0,vol/2,5)
+        
+        stroke(this.R,this.G,this.B)
+        rect(-25,0,vol+random(0,20),5)
     
-    stroke(this.R,this.G,this.B)
-    rotate(this.angle+=this.speed)
-    translate(75,0)
-    //rect(-25,0,random(50),5)
-    rect(-25,0,vol,5)
-    rect(-25,0,vol+random(0,20),5)
-
-    resetMatrix()
+        resetMatrix()
     }
 }
